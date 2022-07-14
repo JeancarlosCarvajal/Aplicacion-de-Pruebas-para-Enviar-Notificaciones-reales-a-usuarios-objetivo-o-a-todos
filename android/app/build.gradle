@@ -23,6 +23,10 @@ if (flutterVersionName == null) {
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+// INICIO lo pegue de https://console.firebase.google.com/u/0/project/flutter-notificaciones-b2f96/overview?hl=es-419
+apply plugin: 'com.google.gms.google-services'
+// FIN lo pegue
+
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
@@ -48,8 +52,8 @@ android {
         // nftlatinoamerica 
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
+        minSdkVersion 21
+        targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
@@ -69,4 +73,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // INICIO lo pegue de https://console.firebase.google.com/u/0/project/flutter-notificaciones-b2f96/overview?hl=es-419
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }
