@@ -11,7 +11,7 @@ class MessageScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Notificaciones Push')),
+        title: const Center(child: Text('Notificaciones Push II')),
       ),
       body: Center(
         widthFactor: double.infinity,
