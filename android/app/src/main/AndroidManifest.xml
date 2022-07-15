@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nftlatinoamerica.notificaciones">
-   <application
+    package="com.nftlatinoamerica.notificaciones"> 
+    <!-- Lo agrege yo de https://docs.flutter.dev/deployment/android#reviewing-the-app-manifest#uses-permission -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
         android:label="notificaciones"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

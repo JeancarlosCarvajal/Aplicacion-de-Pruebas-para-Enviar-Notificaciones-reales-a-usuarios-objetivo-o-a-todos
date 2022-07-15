@@ -6,12 +6,17 @@ class MessageScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+    
+    final args = ModalRoute.of(context)?.settings.arguments ?? 'No Data desde Message Screen';
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Message'),
+        title: const Center(child: Text('Notificaciones')),
       ),
-      body: const Center(
-         child: Text('Message Screen', style: TextStyle(fontSize: 30)),
+      body: Center(
+        widthFactor: double.infinity,
+        //  me daba error de string to objeto y lo coloque asi '$args'
+         child: Text('$args', textAlign: TextAlign.center, style: const TextStyle(fontSize: 30,)),
       ),
     );
   }
